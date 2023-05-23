@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "goldars",
+  "info": {
+    "singularName": "goldar",
+    "pluralName": "goldars",
+    "displayName": "goldar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "penduduks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::penduduk.penduduk",
+      "mappedBy": "goldar"
+    }
+  }
+}

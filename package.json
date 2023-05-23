@@ -1,0 +1,32 @@
+{
+  "name": "e-desa",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.10.5",
+    "@strapi/plugin-users-permissions": "4.10.5",
+    "@strapi/strapi": "4.10.5",
+    "mysql": "2.18.1",
+    "strapi-location-field-plugin": "^1.2.0",
+    "strapi-plugin-country-select": "^1.0.2",
+    "strapi-plugin-import-export-entries": "^1.19.2"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "4ba40be4-4d6e-4c80-8157-d00f22fbf9bc"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

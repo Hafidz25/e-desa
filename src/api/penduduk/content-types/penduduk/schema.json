@@ -1,0 +1,91 @@
+{
+  "kind": "collectionType",
+  "collectionName": "penduduks",
+  "info": {
+    "singularName": "penduduk",
+    "pluralName": "penduduks",
+    "displayName": "Penduduk",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nama": {
+      "type": "string",
+      "required": true
+    },
+    "agama": {
+      "type": "enumeration",
+      "enum": [
+        "Islam",
+        "Kristen",
+        "Katolik",
+        "Hindu",
+        "Budha",
+        "Konghucu"
+      ],
+      "required": true
+    },
+    "foto_ktp": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "jenis_kelamin": {
+      "type": "enumeration",
+      "enum": [
+        "Laki-laki",
+        "Perempuan"
+      ],
+      "required": true
+    },
+    "nik": {
+      "type": "biginteger",
+      "required": true,
+      "unique": true,
+      "max": "16"
+    },
+    "foto_profil": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "foto_tanda_tangan": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "dokter": {
+      "type": "string"
+    },
+    "tanggal_lahir": {
+      "type": "date",
+      "required": true
+    },
+    "kenegaraan": {
+      "type": "customField",
+      "customField": "plugin::country-select.country",
+      "required": true
+    },
+    "lokasi": {
+      "type": "string"
+    },
+    "goldar": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::goldar.goldar",
+      "inversedBy": "penduduks"
+    }
+  }
+}
