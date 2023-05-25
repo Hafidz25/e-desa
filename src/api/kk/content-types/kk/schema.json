@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kks",
+  "info": {
+    "singularName": "kk",
+    "pluralName": "kks",
+    "displayName": "kk",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "no_kk": {
+      "type": "string",
+      "maxLength": 16,
+      "required": true
+    },
+    "peran": {
+      "type": "enumeration",
+      "enum": [
+        "Ayah",
+        "Ibu"
+      ],
+      "required": true
+    },
+    "province": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::province.province"
+    },
+    "upload_kk": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "kepala_keluarga": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::penduduk.penduduk"
+    },
+    "city": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::city.city"
+    },
+    "district": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::district.district"
+    }
+  }
+}

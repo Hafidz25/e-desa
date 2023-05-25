@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wilayahs",
+  "info": {
+    "singularName": "wilayah",
+    "pluralName": "wilayahs",
+    "displayName": "wilayah"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "penduduks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::penduduk.penduduk",
+      "mappedBy": "wilayah"
+    }
+  }
+}

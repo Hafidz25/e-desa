@@ -4,7 +4,7 @@
   "info": {
     "singularName": "penduduk",
     "pluralName": "penduduks",
-    "displayName": "Penduduk",
+    "displayName": "penduduk",
     "description": ""
   },
   "options": {
@@ -14,18 +14,6 @@
   "attributes": {
     "nama": {
       "type": "string",
-      "required": true
-    },
-    "agama": {
-      "type": "enumeration",
-      "enum": [
-        "Islam",
-        "Kristen",
-        "Katolik",
-        "Hindu",
-        "Budha",
-        "Konghucu"
-      ],
       "required": true
     },
     "foto_ktp": {
@@ -43,12 +31,6 @@
         "Perempuan"
       ],
       "required": true
-    },
-    "nik": {
-      "type": "biginteger",
-      "required": true,
-      "unique": true,
-      "max": "16"
     },
     "foto_profil": {
       "type": "media",
@@ -83,9 +65,24 @@
     },
     "goldar": {
       "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::goldar.goldar"
+    },
+    "agama": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::agama.agama"
+    },
+    "wilayah": {
+      "type": "relation",
       "relation": "manyToOne",
-      "target": "api::goldar.goldar",
+      "target": "api::wilayah.wilayah",
       "inversedBy": "penduduks"
+    },
+    "NIK": {
+      "type": "string",
+      "maxLength": 16,
+      "unique": true
     }
   }
 }

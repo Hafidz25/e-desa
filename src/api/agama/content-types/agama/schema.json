@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "goldars",
+  "collectionName": "agamas",
   "info": {
-    "singularName": "goldar",
-    "pluralName": "goldars",
-    "displayName": "goldar"
+    "singularName": "agama",
+    "pluralName": "agamas",
+    "displayName": "agama"
   },
   "options": {
     "draftAndPublish": true
